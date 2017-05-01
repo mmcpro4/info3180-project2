@@ -1,0 +1,55 @@
+  <title>Make-A-Wishlist</title>
+    <link href="css/signup.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="/static/js/signup"></script>
+  <body background="images/wishlist.jpg">
+<h2>Signup</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Click here to Sign Up</button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+  <form class="modal-content animate" ng-submit="Master.register()">
+    <div class="container">
+      <label><strong>Username</strong></label>
+      <input type="text" placeholder="Enter an Username" name="username" ng-model="master.register.name" required>
+
+      <label><strong>Email</strong></label>
+      <input type="email" placeholder="Enter Email" name="email" ng-model="master.register.email" required><br><br>
+
+      <label><strong>Password</strong></label>
+      <input type="password" placeholder="Enter Password" name="psw" ng-model="master.register.pword" required>
+
+      <label><strong>Age</strong></label>
+      <input type="number" placeholder="Enter an age" name="age" ng-model="master.register.age" max="120" required><br><br>
+
+      <fieldset>
+        <label for="sex" >Gender</label>
+        <div>
+          <label>
+            <input type="radio" ng-model="master.register.sex" name="gender" id="sex2" value="M">
+            Male
+          </label>
+        </div>
+        <div >
+          <label >
+            <input type="radio" ng-model="master.register.sex" name="gender" id="sex1" value="F">
+            Female
+          </label>
+        </div>
+        </fieldset>
+        <input type="reset" value="Reset">
+
+      <input type="checkbox" checked="checked"> Remember me
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+<a href="index.html#home"><button class="signupbtn">Go to Homepage</a></button>
+<div class="footer">
+      <!--Copyright-->
+  <p>&copy; 2017 Make-A-WishList Inc.</p>
+</div>

@@ -1,0 +1,49 @@
+
+    <meta charset="UTF-8">
+    <title>Make-A-Wishlist</title>
+    <link href="/static/css/additem.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="/static/js/additem"></script>
+  <body background="images/wishlist.jpg">
+  <ul>
+      <li><a class = "active" ng-click="Master.setRoute('home')">Home</a></li>
+      <li><a ng-click="Master.setRoute('share')">Share</a></li>
+      <li><a ng-click="Master.setRoute('logout')">Logout</a></li>
+  </ul>
+
+    <h2>Add Item(s) To Wishlist</h2>
+
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Click here to Add Items</button>
+
+<div id="id02" class="modal">
+  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">×</span>
+  <form class="modal-content animate" ng-submit="wishlist.postItem()">
+    <div class="container">
+      <label><strong>Item 1</strong></label>
+      <input type="text" placeholder="Enter an item" name="i1" required>
+
+      <label><strong>Item 2</strong></label>
+      <input type="text" placeholder="Enter an item" name="i2" ><br><br>
+
+      <label><strong>Item 3</strong></label>
+      <input type="text" placeholder="Enter an item" name="i3" >
+
+      <label><strong>Item 4</strong></label>
+      <input type="text" placeholder="Enter an item" name="i4">
+
+      <label><strong>Item 5</strong></label>
+      <input type="text" placeholder="Enter an item" name="i5">
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn" ng-click="Master.setRoute('wishList')">Add Item(s)</button>
+      </div>
+    </div>
+  </form>
+  <p>{{myTxt}}</p>
+</div>
+<a href="index.html#home"><button class="signupbtn">Go to Homepage</a></button>
+</body>
+<div class="footer">
+      <!--Copyright-->
+      <p>&copy; 2017 Make-A-WishList Inc.</p>
+    </div>

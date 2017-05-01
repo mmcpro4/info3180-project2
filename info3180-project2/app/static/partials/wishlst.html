@@ -1,0 +1,22 @@
+<div>
+  <h1>Your Wishlist</h1>
+  <p><a ng-click="Master.setRoute('add')"  role="button">Make a wish</a>
+  &emsp;
+  <a ng-click="Master.setRoute('share')" role="button">Share Wishlist</a></p>
+</div>
+<div data-ng-init="Master.getWishList();">
+<div ng-if="Master.wishes.message" role="alert">{{ Master.wishes.message }}</div>
+<div>
+  <div ng-repeat="wish in Master.wishes.stuff">
+    <div>
+      <img ng-src="{{ wish.thumbnail }}" alt="{{ wish.name }}">
+      <div>
+        <h3>{{ wish.name }}</h3>
+        <p>{{ wish.description }}</p>
+        <p><a ng-click="Master.delete();" role="button">Delete</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

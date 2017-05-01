@@ -1,0 +1,26 @@
+	<title>Make-A-Wishlist</title>
+	<link rel="stylesheet" type="text/css" href="css/sendemail.css">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<body background="images/wishlist.jpg">
+
+	<h2>Email Wishlist</h2>
+
+	<form ng-submit="share()" enctype="text/plain">
+		E-mail:<br>
+		<input type="email" name="email1" ng-model="Master.share.email1" required><br>
+		E-mail:<br>
+		<input type="email" name="email2" ng-model="Master.share.email2"><br>
+		E-mail:<br>
+		<input type="email" name="email3" ng-model="Master.share.email3"><br>
+		Comment:<br>
+		<textarea rows="10" cols="80" required></textarea><br><br>
+		<input type="submit" value="Send">
+		<input type="reset" value="Reset">
+	</form>
+	<a href="index.html"><button>Go Home</button></a>
+	<p ng-if="Master.sent.message" style="color:red">{{ Master.sent.message }}</p>
+</body>
+<div class="footer">
+      <!--Copyright-->
+  <p>&copy; 2017 Make-A-WishList Inc.</p>
+</div>

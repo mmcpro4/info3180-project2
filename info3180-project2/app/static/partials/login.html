@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Make-A-Wishlist</title>
+    <link href="css/login.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  </head>
+  <body background="images/wishlist.jpg">
+
+    <p class="navbar-link" ng-if="Master.isauthorized();">Signed in as </p><p>{{person_name }}</p>
+    <form ng-if="!Master.isauthorized()" ng-submit="Master.login()" >
+
+      <div class="container">
+        <label><b>Username/Email</b></label>
+        <input type="text" placeholder="Enter Username" name="name" ng-model="email" required>
+
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" ng-model="password" required>
+        
+        <button type="submit" id="loginbtn">Login</button>
+        <input type="checkbox" checked="checked"> Remember me
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <!--<button type="button" class="logout"><a href="logout.html#logout">Logout</a></button>-->
+        <span class="psw">Forgot <a href="forgot_pw.html">password?</a></span>
+        <span class="psw">Go to <a href="index.html#home">Homepage <br></a></span>
+      </div>
+    </form>
+    <div class="footer">
+      <!--Copyright-->
+      <p>&copy; 2017 Make-A-WishList Inc.</p>
+    </div>
+  </body>
+</html>

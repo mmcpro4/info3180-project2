@@ -1,0 +1,25 @@
+#gohome{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+}
+
+h1{
+    font-family: Monotype Corsiva;
+    font-size: 70px;
+    color:#FFF0F5;
+    text-align: center;;
+}
+
+h3{
+    text-align: center;
+}
+.footer{
+    text-align: center;
+    margin-top: 10.5cm;
+    margin-left: 10cm;
+}
