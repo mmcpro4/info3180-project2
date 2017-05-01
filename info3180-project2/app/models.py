@@ -12,7 +12,7 @@ class User(db.Model):
     email = db.Column(db.String(255), unique=True)
     pword = db.Column(db.String(255))
     made_on = db.Column(db.String(80))
-    wishs = db.relationship('Wish', secondary=wishes, backref=db.backref('userprofiles', lazy='dynamic'))
+    wishs = db.relationship('Wish', backref=db.backref('userprofiles', lazy='dynamic'))
     
     def __init__(self, uid, name, age, sex, email, pword, made_on):
         self.uid = uid
